@@ -85,6 +85,21 @@ const LocationMap = () => {
           ))}
         </div>
       </div>
+
+      {/* Get Directions Button */}
+      <div className="mt-8 flex justify-center">
+        <a
+          href={`https://www.google.com/maps/dir/?api=1&destination=${locations[0].lat},${locations[0].lng}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-6 py-3 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded-lg transition-all duration-300 flex items-center gap-2"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Get Directions
+        </a>
+      </div>
     </div>
   );
 };
