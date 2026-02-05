@@ -81,6 +81,23 @@ const LocationMap = () => {
       <div className="rounded-2xl border border-border shadow-lg h-96 md:h-[500px] relative z-10">
         <div ref={mapContainer} className="w-full h-full rounded-2xl" style={{ position: 'relative' }} />
       </div>
+
+      {/* Service Areas Buttons */}
+      <div className="mt-10 pt-10 border-t border-border/30">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+          {locations.map((location) => (
+            <button
+              key={location.name}
+              className="group relative px-4 py-3 rounded-full bg-card border border-border hover:border-accent/50 transition-all duration-300 hover:bg-primary/10 text-cream text-sm font-medium"
+            >
+              <span className="flex items-center justify-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-accent group-hover:bg-accent/80 transition-all duration-300"></span>
+                {location.name}
+              </span>
+            </button>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
