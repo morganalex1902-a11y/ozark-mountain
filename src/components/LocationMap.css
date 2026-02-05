@@ -1,32 +1,33 @@
-/* Fix Leaflet z-index stacking issues */
+/* Fix Leaflet z-index stacking - keep map below navbar (z-50) */
 .leaflet-container {
-  z-index: -1;
+  z-index: 10;
+  position: relative;
 }
 
 .leaflet-top,
 .leaflet-bottom {
-  z-index: -1000;
+  z-index: 20;
   position: absolute;
   pointer-events: none;
 }
 
 .leaflet-control {
   pointer-events: auto;
-  z-index: -1000;
+  z-index: 20;
 }
 
 .leaflet-popup {
-  z-index: -99;
+  z-index: 30;
 }
 
 .leaflet-popup-pane {
-  z-index: -1010;
+  z-index: 30;
 }
 
 .leaflet-marker-pane {
-  z-index: -600;
+  z-index: 15;
 }
 
 .leaflet-tooltip-pane {
-  z-index: -650;
+  z-index: 16;
 }
