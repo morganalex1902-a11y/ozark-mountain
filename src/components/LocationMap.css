@@ -1,32 +1,75 @@
 /* Fix Leaflet z-index stacking issues */
 .leaflet-container {
-  z-index: -1;
+  z-index: 1;
+  position: relative;
 }
 
+/* Ensure map controls don't interfere */
 .leaflet-top,
 .leaflet-bottom {
-  z-index: -1000;
-  
+  z-index: 400;
   pointer-events: none;
 }
 
 .leaflet-control {
   pointer-events: auto;
-  z-index: -1000;
+  z-index: 401;
 }
 
+/* Ensure popups are visible */
 .leaflet-popup {
-  z-index: -99;
+  z-index: 650;
 }
 
 .leaflet-popup-pane {
-  z-index: -1010;
+  z-index: 650;
 }
 
+/* Ensure markers are visible */
 .leaflet-marker-pane {
-  z-index: -600;
+  z-index: 600;
 }
 
 .leaflet-tooltip-pane {
-  z-index: -650;
+  z-index: 620;
+}
+
+/* Ensure shadow/pane hierarchy */
+.leaflet-shadow-pane {
+  z-index: 200;
+}
+
+.leaflet-image-layer {
+  z-index: 100;
+}
+
+.leaflet-tile-pane {
+  z-index: 2;
+}
+
+/* Ensure popups break out of parent overflow constraints */
+.leaflet-popup-pane .leaflet-popup {
+  position: relative !important;
+}
+
+/* Style the popup content */
+.leaflet-popup-content-wrapper {
+  background: hsl(160, 12%, 12%);
+  color: hsl(45, 20%, 92%);
+  border: 1px solid hsl(160, 10%, 20%);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.5);
+}
+
+.leaflet-popup-tip {
+  background: hsl(160, 12%, 12%);
+}
+
+.leaflet-popup-content {
+  font-family: 'Outfit', system-ui, sans-serif;
+  margin: 0;
+}
+
+.leaflet-popup-content strong {
+  color: hsl(28, 85%, 55%);
 }
