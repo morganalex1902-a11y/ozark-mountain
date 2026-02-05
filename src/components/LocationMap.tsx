@@ -1,7 +1,7 @@
 import "./LocationMap.css";
 
 const locations = [
-  { name: "Dover", lat: 35.40147, lng: -93.11434, address: "21500 SR 7 N, Dover AR 72837" }
+  { name: "Dover", lat: 35.40147, lng: -93.11434, address: "21454 SR 7 North, Dover AR 72837" }
 ];
 
 const LocationMap = () => {
@@ -46,6 +46,21 @@ const LocationMap = () => {
               </span>
             </button>
           ))}
+        </div>
+      </div>
+
+      {/* Embedded Map */}
+      <div className="mt-10 pt-10 border-t border-border/30">
+        <div className="flex justify-center">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!4v1770325606504!6m8!1m7!1sTyHA-4zLrvJZcjbEM1MM9g!2m2!1d35.52926964427203!2d-93.09531002058185!3f33.04840117915495!4f-19.451120976404184!5f0.7820865974627469"
+            width="600"
+            height="450"
+            style={{border:0}}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
 
