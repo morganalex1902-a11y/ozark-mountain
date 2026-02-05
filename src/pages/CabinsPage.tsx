@@ -32,6 +32,8 @@ const features = [
 ];
 
 export default function CabinsPage() {
+  const [isMapOpen, setIsMapOpen] = useState(false);
+
   return (
     <>
       {/* Hero Section */}
