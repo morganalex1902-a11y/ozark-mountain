@@ -1,32 +1,48 @@
 /* Fix Leaflet z-index stacking issues */
 .leaflet-container {
-  z-index: -1;
+  z-index: 1;
+  position: relative;
 }
 
+/* Ensure map controls don't interfere */
 .leaflet-top,
 .leaflet-bottom {
-  z-index: -1000;
-  
+  z-index: 400;
   pointer-events: none;
 }
 
 .leaflet-control {
   pointer-events: auto;
-  z-index: -1000;
+  z-index: 401;
 }
 
+/* Ensure popups are visible */
 .leaflet-popup {
-  z-index: -99;
+  z-index: 650;
 }
 
 .leaflet-popup-pane {
-  z-index: -1010;
+  z-index: 650;
 }
 
+/* Ensure markers are visible */
 .leaflet-marker-pane {
-  z-index: -600;
+  z-index: 600;
 }
 
 .leaflet-tooltip-pane {
-  z-index: -650;
+  z-index: 620;
+}
+
+/* Ensure shadow/pane hierarchy */
+.leaflet-shadow-pane {
+  z-index: 200;
+}
+
+.leaflet-image-layer {
+  z-index: 100;
+}
+
+.leaflet-tile-pane {
+  z-index: 2;
 }
