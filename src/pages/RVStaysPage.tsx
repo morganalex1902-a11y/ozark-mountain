@@ -25,6 +25,8 @@ const staggerContainer = {
 };
 
 export default function RVStaysPage() {
+  const [isMapOpen, setIsMapOpen] = useState(false);
+
   return (
     <>
       {/* Hero Section */}
