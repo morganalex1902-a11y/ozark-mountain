@@ -4,21 +4,7 @@ import "leaflet/dist/leaflet.css";
 import "./LocationMap.css";
 
 const locations = [
-  { name: "Dover, AR", lat: 35.40147, lng: -93.11434 },
-  { name: "Traverse City", lat: 44.7629, lng: -85.6233 },
-  { name: "Bloomfield Hills", lat: 42.5669, lng: -83.2475 },
-  { name: "Birmingham", lat: 42.5486, lng: -83.2152 },
-  { name: "Grosse Pointe", lat: 42.4425, lng: -82.9256 },
-  { name: "Northville", lat: 42.2345, lng: -83.4791 },
-  { name: "Novi", lat: 42.4761, lng: -83.4778 },
-  { name: "Orchard Lake", lat: 42.5986, lng: -83.3633 },
-  { name: "Rochester Hills", lat: 42.6606, lng: -83.1357 },
-  { name: "Shelby Township", lat: 42.6199, lng: -83.0347 },
-  { name: "Macomb", lat: 42.7074, lng: -82.8324 },
-  { name: "Troy", lat: 42.5803, lng: -83.1479 },
-  { name: "Sterling Heights", lat: 42.5681, lng: -83.0347 },
-  { name: "Madison Heights", lat: 42.4967, lng: -83.0651 },
-  { name: "Warren", lat: 42.4808, lng: -83.0259 }
+  { name: "Dover", lat: 35.40147, lng: -93.11434 }
 ];
 
 const LocationMap = () => {
