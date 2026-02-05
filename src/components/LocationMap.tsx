@@ -1,69 +1,10 @@
-import { useEffect, useRef } from "react";
-import L from "leaflet";
-import "leaflet/dist/leaflet.css";
 import "./LocationMap.css";
 
 const locations = [
-  { name: "Traverse City", lat: 44.7629, lng: -85.6233 },
-  { name: "Bloomfield Hills", lat: 42.5669, lng: -83.2475 },
-  { name: "Birmingham", lat: 42.5486, lng: -83.2152 },
-  { name: "Grosse Pointe", lat: 42.4425, lng: -82.9256 },
-  { name: "Northville", lat: 42.2345, lng: -83.4791 },
-  { name: "Novi", lat: 42.4761, lng: -83.4778 },
-  { name: "Orchard Lake", lat: 42.5986, lng: -83.3633 },
-  { name: "Rochester Hills", lat: 42.6606, lng: -83.1357 },
-  { name: "Shelby Township", lat: 42.6199, lng: -83.0347 },
-  { name: "Macomb", lat: 42.7074, lng: -82.8324 },
-  { name: "Troy", lat: 42.5803, lng: -83.1479 },
-  { name: "Sterling Heights", lat: 42.5681, lng: -83.0347 },
-  { name: "Madison Heights", lat: 42.4967, lng: -83.0651 },
-  { name: "Warren", lat: 42.4808, lng: -83.0259 }
+  { name: "Dover", lat: 35.40147, lng: -93.11434, address: "21454 SR 7 North, Dover AR 72837" }
 ];
 
 const LocationMap = () => {
-  const mapContainer = useRef<HTMLDivElement>(null);
-  const map = useRef<L.Map | null>(null);
-
-  useEffect(() => {
-    if (!mapContainer.current) return;
-
-    // Create map
-    if (!map.current) {
-      map.current = L.map(mapContainer.current).setView([42.5, -83.1], 10);
-
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-        maxZoom: 19
-      }).addTo(map.current);
-
-      // Add markers for each location
-      locations.forEach(location => {
-        const marker = L.marker([location.lat, location.lng], {
-          icon: L.icon({
-            iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon.png',
-            iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon-2x.png',
-            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
-            iconSize: [25, 41],
-            iconAnchor: [12, 41],
-            popupAnchor: [1, -34],
-            shadowSize: [41, 41]
-          })
-        });
-
-        marker.bindPopup(`<strong>${location.name}</strong><br/>Our Service Area`);
-        marker.addTo(map.current!);
-      });
-
-      // Fit bounds to all markers
-      const bounds = L.latLngBounds(locations.map(l => [l.lat, l.lng]));
-      map.current.fitBounds(bounds, { padding: [50, 50] });
-    }
-
-    // Resize map when container is visible
-    setTimeout(() => {
-      map.current?.invalidateSize();
-    }, 100);
-  }, []);
 
   return (
     <div className="w-full space-y-6">
@@ -78,8 +19,17 @@ const LocationMap = () => {
       </div>
 
       {/* Map Container */}
-      <div className="rounded-2xl border border-border shadow-lg h-96 md:h-[500px] relative z-10">
-        <div ref={mapContainer} className="w-full h-full rounded-2xl" style={{ position: 'relative' }} />
+      <div className="rounded-2xl border border-border shadow-lg h-96 md:h-[500px] relative z-10 overflow-hidden">
+        <iframe
+          title="Google Map - Dover AR"
+          src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3357.2532508522667!2d-93.11434!3d35.40147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c8a9b3d9b3d9b3%3A0x1234567890!2s21454%20SR%207%20N%2C%20Dover%2C%20AR%2072837!5e0!3m2!1sen!2sus!4v1234567890`}
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
 
       {/* Service Areas Buttons */}
@@ -98,6 +48,7 @@ const LocationMap = () => {
           ))}
         </div>
       </div>
+
     </div>
   );
 };
