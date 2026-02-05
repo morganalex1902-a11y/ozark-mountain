@@ -1,7 +1,7 @@
 import "./LocationMap.css";
 
 const locations = [
-  { name: "Dover", lat: 35.40147, lng: -93.11434, address: "21468 State Rte 7 N, Dover AR 72837" }
+  { name: "Dover", lat: 35.40147, lng: -93.11434, address: "21500 SR 7 N, Dover AR 72837" }
 ];
 
 const LocationMap = () => {
@@ -22,7 +22,7 @@ const LocationMap = () => {
       <div className="rounded-2xl border border-border shadow-lg h-96 md:h-[500px] relative z-10 overflow-hidden">
         <iframe
           title="Google Map - Dover AR"
-          src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3357.2532508522667!2d-93.11434!3d35.40147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c8a9b3d9b3d9b3%3A0x1234567890!2s21468%20State%20Rte%207%20N%2C%20Dover%2C%20AR%2072837!5e0!3m2!1sen!2sus!4v1234567890`}
+          src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3357.2532508522667!2d-93.11434!3d35.40147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c8a9b3d9b3d9b3%3A0x1234567890!2s21500%20SR%207%20N%2C%20Dover%2C%20AR%2072837!5e0!3m2!1sen!2sus!4v1234567890`}
           width="100%"
           height="100%"
           style={{ border: 0 }}
