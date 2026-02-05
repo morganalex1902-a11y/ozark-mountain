@@ -41,9 +41,11 @@ interface Landmark {
 }
 
 export default function LocationMap() {
+  const [showCard, setShowCard] = useState(true);
+
   // Approximate coordinates for 21454 SR 7 North, Arkansas area
   const propertyLocation: [number, number] = [38.0542, -92.5958];
-  
+
   const landmarks: Landmark[] = [
     {
       name: 'Mack Pines',
@@ -58,6 +60,11 @@ export default function LocationMap() {
       lng: -92.5658
     }
   ];
+
+  const handleGetDirections = () => {
+    const mapsUrl = `https://www.google.com/maps/search/21454+SR+7+North,+Arkansas`;
+    window.open(mapsUrl, '_blank');
+  };
 
   return (
     <div className="w-full space-y-6">
@@ -75,7 +82,7 @@ export default function LocationMap() {
       </div>
 
       {/* Map Container */}
-      <div className="rounded-2xl overflow-hidden border border-border shadow-lg h-96 md:h-[500px]">
+      <div className="rounded-2xl overflow-hidden border border-border shadow-lg h-96 md:h-[500px] relative">
         <MapContainer
           center={propertyLocation}
           zoom={12}
@@ -85,16 +92,9 @@ export default function LocationMap() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          
+
           {/* Main Property Marker */}
-          <Marker position={propertyLocation} icon={mainPropertyIcon}>
-            <Popup>
-              <div className="p-2">
-                <h4 className="font-display font-bold text-sm">Ozark Mountain Escape</h4>
-                <p className="text-xs text-gray-600">21454 SR 7 North</p>
-              </div>
-            </Popup>
-          </Marker>
+          <Marker position={propertyLocation} icon={mainPropertyIcon} />
 
           {/* Landmark Markers */}
           {landmarks.map((landmark) => (
@@ -102,16 +102,48 @@ export default function LocationMap() {
               key={landmark.name}
               position={[landmark.lat, landmark.lng]}
               icon={landmarkIcon}
-            >
-              <Popup>
-                <div className="p-2">
-                  <h4 className="font-display font-bold text-sm">{landmark.name}</h4>
-                  <p className="text-xs text-gray-600">{landmark.distance}</p>
-                </div>
-              </Popup>
-            </Marker>
+            />
           ))}
         </MapContainer>
+
+        {/* Location Card Overlay */}
+        {showCard && (
+          <div className="absolute bottom-6 left-6 z-[999] bg-gray-800 text-white rounded-xl shadow-xl p-4 w-72 border border-gray-700">
+            <div className="flex items-start gap-4">
+              {/* Icon Badge */}
+              <div className="flex-shrink-0 bg-yellow-500 rounded-lg p-3 flex items-center justify-center">
+                <MapPin className="w-5 h-5 text-gray-900" />
+              </div>
+
+              {/* Content */}
+              <div className="flex-1 space-y-1">
+                <h4 className="font-display font-bold text-sm text-white">
+                  Ozark Mountain Escape
+                </h4>
+                <p className="text-xs text-gray-300">
+                  21454 SR 7 North, Arkansas
+                </p>
+                <button
+                  onClick={handleGetDirections}
+                  className="text-xs text-yellow-400 font-medium hover:text-yellow-300 transition-colors flex items-center gap-1 mt-2 group"
+                >
+                  Get Directions
+                  <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </div>
+
+              {/* Close Button */}
+              <button
+                onClick={() => setShowCard(false)}
+                className="flex-shrink-0 text-gray-400 hover:text-white transition-colors"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Distance Information */}
