@@ -73,7 +73,7 @@ const LocationMap = () => {
           Our Service Areas
         </h3>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          We serve multiple locations across Michigan. Click the markers to see more details.
+          We serve multiple locations across Arkansas. Click the markers to see more details.
         </p>
       </div>
 
