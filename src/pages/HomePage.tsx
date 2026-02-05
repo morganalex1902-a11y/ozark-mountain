@@ -49,6 +49,8 @@ const activities = [
 ];
 
 export default function HomePage() {
+  const [isMapOpen, setIsMapOpen] = useState(false);
+
   return (
     <>
       {/* Hero Section */}
