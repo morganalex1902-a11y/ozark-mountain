@@ -16,7 +16,7 @@ const LocationMap = () => {
 
     // Create map
     if (!map.current) {
-      map.current = L.map(mapContainer.current).setView([39.5, -88], 5);
+      map.current = L.map(mapContainer.current).setView([35.40147, -93.11434], 10);
 
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
