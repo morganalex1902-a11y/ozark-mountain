@@ -17,7 +17,7 @@
 }
 
 .leaflet-popup {
-  z-index: 0;
+  z-index: -9;
 }
 
 .leaflet-popup-pane {
@@ -25,7 +25,7 @@
 }
 
 .leaflet-marker-pane {
-  z-index: 60;
+  z-index: 0;
 }
 
 .leaflet-tooltip-pane {
