@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Home, Truck, Mountain, Droplets, TreePine, Sunrise } from 'lucide-react';
+import { ArrowRight, Home, Truck, Mountain, Droplets, TreePine, Sunrise, MapPin } from 'lucide-react';
 import LocationMap from '@/components/LocationMap';
 import heroImage from '@/assets/hero-mountains.jpg';
 const cabinImage = 'https://cdn.builder.io/api/v1/image/assets%2Fac74af0e91684e859253068842865ac0%2Fd119848df086487990a319d28703f56f?format=webp&width=800&height=1200';
