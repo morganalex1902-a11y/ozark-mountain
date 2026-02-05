@@ -1,7 +1,7 @@
 import "./LocationMap.css";
 
 const locations = [
-  { name: "Dover", lat: 35.40147, lng: -93.11434, address: "21454 SR 7 North, Dover AR 72837" }
+  { name: "Dover", lat: 35.40147, lng: -93.11434, address: "21468 State Rte 7 N, Dover AR 72837" }
 ];
 
 const LocationMap = () => {
