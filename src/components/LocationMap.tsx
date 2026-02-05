@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import "./LocationMap.css";
 
 const locations = [
   { name: "Traverse City", lat: 44.7629, lng: -85.6233 },
