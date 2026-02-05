@@ -1,32 +1,32 @@
 /* Fix Leaflet z-index stacking issues */
 .leaflet-container {
-  z-index: 1;
+  z-index: -1;
 }
 
 .leaflet-top,
 .leaflet-bottom {
-  z-index: 1000;
-  position: absolute;
+  z-index: -1000;
+  
   pointer-events: none;
 }
 
 .leaflet-control {
   pointer-events: auto;
-  z-index: 1000;
+  z-index: -1000;
 }
 
 .leaflet-popup {
-  z-index: 1010;
+  z-index: -99;
 }
 
 .leaflet-popup-pane {
-  z-index: 1010;
+  z-index: -1010;
 }
 
 .leaflet-marker-pane {
-  z-index: 600;
+  z-index: -600;
 }
 
 .leaflet-tooltip-pane {
-  z-index: 650;
+  z-index: -650;
 }
