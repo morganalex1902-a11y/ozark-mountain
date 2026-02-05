@@ -325,7 +325,7 @@ export default function ContactPage() {
       </section>
 
       {/* Location Section */}
-      <section className="section-padding bg-card overflow-hidden">
+      <section className="section-padding bg-card">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial="hidden"
