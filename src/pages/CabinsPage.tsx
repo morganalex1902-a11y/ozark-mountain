@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Users, Wifi, Flame, Coffee, MapPin } from 'lucide-react';
+import { ArrowRight, Users, Wifi, Flame, Coffee } from 'lucide-react';
 import LocationMap from '@/components/LocationMap';
 
 const fadeUpVariants = {
