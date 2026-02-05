@@ -1,56 +1,10 @@
-import { useEffect, useRef } from "react";
-import L from "leaflet";
-import "leaflet/dist/leaflet.css";
 import "./LocationMap.css";
 
 const locations = [
-  { name: "Dover", lat: 35.40147, lng: -93.11434 }
+  { name: "Dover", lat: 35.40147, lng: -93.11434, address: "21454 SR 7 North, Dover AR 72837" }
 ];
 
 const LocationMap = () => {
-  const mapContainer = useRef<HTMLDivElement>(null);
-  const map = useRef<L.Map | null>(null);
-
-  useEffect(() => {
-    if (!mapContainer.current) return;
-
-    // Create map
-    if (!map.current) {
-      map.current = L.map(mapContainer.current).setView([35.40147, -93.11434], 10);
-
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-        maxZoom: 19
-      }).addTo(map.current);
-
-      // Add markers for each location
-      locations.forEach(location => {
-        const marker = L.marker([location.lat, location.lng], {
-          icon: L.icon({
-            iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon.png',
-            iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon-2x.png',
-            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
-            iconSize: [25, 41],
-            iconAnchor: [12, 41],
-            popupAnchor: [1, -34],
-            shadowSize: [41, 41]
-          })
-        });
-
-        marker.bindPopup(`<strong>${location.name}</strong><br/>Our Service Area`);
-        marker.addTo(map.current!);
-      });
-
-      // Fit bounds to all markers
-      const bounds = L.latLngBounds(locations.map(l => [l.lat, l.lng]));
-      map.current.fitBounds(bounds, { padding: [50, 50] });
-    }
-
-    // Resize map when container is visible
-    setTimeout(() => {
-      map.current?.invalidateSize();
-    }, 100);
-  }, []);
 
   return (
     <div className="w-full space-y-6">
