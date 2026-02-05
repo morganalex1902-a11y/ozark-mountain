@@ -334,10 +334,30 @@ export default function ContactPage() {
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
           >
-            <LocationMap />
+            <div className="text-center space-y-6">
+              <div className="space-y-3">
+                <h3 className="font-display text-2xl md:text-3xl text-cream">
+                  Our Service Areas
+                </h3>
+                <p className="text-muted-foreground max-w-2xl mx-auto">
+                  We serve multiple locations across Michigan
+                </p>
+              </div>
+
+              <button
+                onClick={() => setIsMapOpen(true)}
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-accent hover:bg-accent/90 text-accent-foreground font-semibold transition-colors"
+              >
+                <MapPin className="w-5 h-5" />
+                View Service Areas on Map
+              </button>
+            </div>
           </motion.div>
         </div>
       </section>
+
+      {/* Location Map Modal */}
+      <LocationMap isOpen={isMapOpen} onClose={() => setIsMapOpen(false)} />
     </>
   );
 }
