@@ -4,6 +4,7 @@ import "leaflet/dist/leaflet.css";
 import "./LocationMap.css";
 
 const locations = [
+  { name: "Dover, AR", lat: 35.40147, lng: -93.11434 },
   { name: "Traverse City", lat: 44.7629, lng: -85.6233 },
   { name: "Bloomfield Hills", lat: 42.5669, lng: -83.2475 },
   { name: "Birmingham", lat: 42.5486, lng: -83.2152 },
