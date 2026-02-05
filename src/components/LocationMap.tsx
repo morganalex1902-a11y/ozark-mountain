@@ -67,8 +67,8 @@ const LocationMap = () => {
       </div>
 
       {/* Map Container */}
-      <div className="rounded-2xl overflow-hidden border border-border shadow-lg h-96 md:h-[500px]">
-        <div ref={mapContainer} className="w-full h-full" />
+      <div className="rounded-2xl border border-border shadow-lg h-96 md:h-[500px] relative z-10">
+        <div ref={mapContainer} className="w-full h-full rounded-2xl" style={{ position: 'relative' }} />
       </div>
     </div>
   );
