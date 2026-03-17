@@ -104,14 +104,14 @@ export default function CabinsPage() {
             className="group relative h-96 md:h-[500px] rounded-2xl overflow-hidden border border-border cursor-pointer"
           >
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2Fac74af0e91684e859253068842865ac0%2Fd119848df086487990a319d28703f56f?format=webp&width=800&height=1200"
-              alt="Cozy cabin in wooded Ozark setting"
+              src="https://cdn.builder.io/api/v1/image/assets%2F65f7149b6e744edf9d649d7a825379d9%2Fcb95dcceafdc4cfe8752f048df08a87d?format=webp&width=800&height=1200"
+              alt="Our modern cabin in the Ozarks"
               className="w-full h-full object-cover transition-all duration-300 blur-sm group-hover:blur-none"
             />
             <div className="absolute inset-0 bg-black/40 opacity-100 group-hover:opacity-0 transition-opacity duration-300" />
             <div className="absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-opacity duration-300">
               <p className="text-white text-lg md:text-2xl italic text-center px-6 font-bold">
-                Image shown is for inspiration only. Not the actual cabin.
+                Hover to see our beautiful cabin
               </p>
             </div>
           </motion.div>
