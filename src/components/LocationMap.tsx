@@ -21,8 +21,8 @@ const LocationMap = () => {
       {/* Map Container */}
       <div className="rounded-2xl border border-border shadow-lg h-96 md:h-[500px] relative z-10 overflow-hidden">
         <iframe
-          title="Google Map - Dover AR"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1034.8215987306778!2d-93.09468568983628!3d35.53203163948652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87cdcaac70053225%3A0x849e1bce10ddebee!2s21454%20State%20Rte%207%20N%2C%20Dover%2C%20AR%2072837!5e1!3m2!1sen!2sus!4v1770326235026!5m2!1sen!2sus"
+          title="Google Map - Ozark Mountain Location"
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3246.548877995666!2d-93.09848652421857!3d35.540144272633036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2s!4v1773790694917!5m2!1sen!2s"
           width="100%"
           height="100%"
           style={{ border: 0 }}
@@ -53,7 +53,7 @@ const LocationMap = () => {
       <div className="mt-10 pt-10 border-t border-border/30">
         <div className="flex justify-center">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!4v1770325606504!6m8!1m7!1sTyHA-4zLrvJZcjbEM1MM9g!2m2!1d35.52926964427203!2d-93.09531002058185!3f33.04840117915495!4f-19.451120976404184!5f0.7820865974627469"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3246.548877995666!2d-93.09848652421857!3d35.540144272633036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2s!4v1773790694917!5m2!1sen!2s"
             width="600"
             height="450"
             style={{border:0}}
