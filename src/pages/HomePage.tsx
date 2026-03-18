@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Home, Truck, Mountain, Droplets, TreePine, Sunrise } from 'lucide-react';
 import LocationMap from '@/components/LocationMap';
 import heroImage from '@/assets/hero-mountains.jpg';
-const cabinImage = 'https://cdn.builder.io/api/v1/image/assets%2Fac74af0e91684e859253068842865ac0%2Fd119848df086487990a319d28703f56f?format=webp&width=800&height=1200';
+const cabinImage = 'https://cdn.builder.io/api/v1/image/assets%2F65f7149b6e744edf9d649d7a825379d9%2Fcb95dcceafdc4cfe8752f048df08a87d?format=webp&width=800&height=1200';
 import rvImage from '@/assets/rv-camping.jpg';
 import utvImage from '@/assets/activity-utv.jpg';
 import waterfallImage from '@/assets/activity-waterfall.jpg';
@@ -188,12 +188,12 @@ export default function HomePage() {
                 <div className="relative h-80 overflow-hidden bg-gradient-to-b from-green-900 via-green-800 to-green-900">
                   <img
                     src={cabinImage}
-                    alt="Cozy cabin in the Ozarks"
+                    alt="Our modern cabin in the Ozarks"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none" />
                   <div className="absolute bottom-12 right-3 md:bottom-14 md:right-4 relative z-20">
-                    <p className="text-xs md:text-sm text-gray-300 italic">Image shown is for inspiration only. Not the actual cabin.</p>
+                    <p className="text-xs md:text-sm text-gray-300 italic">Discover our beautiful cabin retreat</p>
                   </div>
                   <div className="absolute bottom-6 left-6 right-6 relative z-10">
                     <div className="flex items-center gap-3 mb-2">
