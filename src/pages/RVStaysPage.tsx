@@ -59,7 +59,7 @@ export default function RVStaysPage() {
               View Gallery
               <ArrowRight className="w-5 h-5" />
             </Link>
-            <Link to="/rv-booking" className="btn-outline inline-flex items-center gap-3">
+            <Link to="/booking" className="btn-outline inline-flex items-center gap-3">
               Book Now
               <ArrowRight className="w-5 h-5" />
             </Link>

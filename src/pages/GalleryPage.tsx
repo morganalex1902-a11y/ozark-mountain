@@ -226,7 +226,7 @@ export default function GalleryPage() {
           <p className="text-muted-foreground text-lg mb-8">
             Start planning your Ozark Mountain Escape adventure today.
           </p>
-          <Link to="/rv-booking" className="btn-primary inline-flex items-center gap-3">
+          <Link to="/booking" className="btn-primary inline-flex items-center gap-3">
             Book Now
             <ArrowRight className="w-5 h-5" />
           </Link>

@@ -203,7 +203,7 @@ export default function CabinsPage() {
             Start your booking process today or contact us to check availability.
           </motion.p>
           <motion.div variants={fadeUpVariants} className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/rv-booking" className="btn-primary inline-flex items-center gap-3">
+            <Link to="/booking" className="btn-primary inline-flex items-center gap-3">
               Book Now
               <ArrowRight className="w-5 h-5" />
             </Link>

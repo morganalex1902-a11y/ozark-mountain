@@ -88,7 +88,7 @@ export default function HomePage() {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Link to="/rv-booking" className="btn-primary inline-flex items-center gap-3">
+            <Link to="/booking" className="btn-primary inline-flex items-center gap-3">
               Book Your Stay
               <ArrowRight className="w-5 h-5" />
             </Link>
@@ -501,7 +501,7 @@ export default function HomePage() {
             Book your stay now or contact us to check availability and begin planning your mountain retreat.
           </motion.p>
           <motion.div variants={fadeUpVariants} className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/rv-booking" className="btn-primary inline-flex items-center gap-3">
+            <Link to="/booking" className="btn-primary inline-flex items-center gap-3">
               Book Now
               <ArrowRight className="w-5 h-5" />
             </Link>
