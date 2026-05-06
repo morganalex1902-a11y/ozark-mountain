@@ -55,7 +55,7 @@ export default function RVStaysPage() {
             Discover our fully-equipped RV accommodations perfect for your Ozark Mountain getaway. Explore our gallery to see all the amenities included in your stay.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/rv-gallery" className="btn-primary inline-flex items-center gap-3">
+            <Link to="/gallery" className="btn-primary inline-flex items-center gap-3">
               View Gallery
               <ArrowRight className="w-5 h-5" />
             </Link>

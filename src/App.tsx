@@ -7,7 +7,7 @@ import { Layout } from "@/components/Layout";
 import HomePage from "@/pages/HomePage";
 import CabinsPage from "@/pages/CabinsPage";
 import RVStaysPage from "@/pages/RVStaysPage";
-import RVGalleryPage from "@/pages/RVGalleryPage";
+import GalleryPage from "@/pages/GalleryPage";
 import RVBookingPage from "@/pages/RVBookingPage";
 import ActivitiesPage from "@/pages/ActivitiesPage";
 import ContactPage from "@/pages/ContactPage";
@@ -26,7 +26,7 @@ const App = () => (
             <Route path="/" element={<HomePage />} />
             <Route path="/cabins" element={<CabinsPage />} />
             <Route path="/rv-stays" element={<RVStaysPage />} />
-            <Route path="/rv-gallery" element={<RVGalleryPage />} />
+            <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/rv-booking" element={<RVBookingPage />} />
             <Route path="/activities" element={<ActivitiesPage />} />
             <Route path="/contact" element={<ContactPage />} />

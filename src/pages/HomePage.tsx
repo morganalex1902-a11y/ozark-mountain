@@ -86,9 +86,14 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Link to="/contact" className="btn-primary inline-flex items-center gap-3">
-              Contact Us for Availability
+            <Link to="/rv-booking" className="btn-primary inline-flex items-center gap-3">
+              Book Your Stay
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link to="/gallery" className="btn-outline inline-flex items-center gap-3">
+              View Gallery
               <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
@@ -483,20 +488,24 @@ export default function HomePage() {
           variants={staggerContainer}
           className="relative z-10 max-w-4xl mx-auto text-center px-6"
         >
-          <motion.h2 
+          <motion.h2
             variants={fadeUpVariants}
             className="font-display text-4xl md:text-5xl lg:text-6xl text-cream mb-6"
           >
             Ready to Escape?
           </motion.h2>
-          <motion.p 
+          <motion.p
             variants={fadeUpVariants}
             className="text-cream/70 text-lg mb-10 max-w-xl mx-auto"
           >
-            Contact us today to check availability and begin planning your mountain retreat.
+            Book your stay now or contact us to check availability and begin planning your mountain retreat.
           </motion.p>
-          <motion.div variants={fadeUpVariants}>
-            <Link to="/contact" className="btn-primary inline-flex items-center gap-3">
+          <motion.div variants={fadeUpVariants} className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/rv-booking" className="btn-primary inline-flex items-center gap-3">
+              Book Now
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link to="/contact" className="btn-outline inline-flex items-center gap-3">
               Get in Touch
               <ArrowRight className="w-5 h-5" />
             </Link>

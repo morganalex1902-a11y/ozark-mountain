@@ -165,12 +165,18 @@ export default function ActivitiesPage() {
             Plan Your Adventure
           </h2>
           <p className="text-muted-foreground text-lg mb-8">
-            Ready to explore the Ozarks? Contact us to plan your stay and discover all the activities waiting for you.
+            Ready to explore the Ozarks? Book your stay and discover all the activities waiting for you.
           </p>
-          <Link to="/contact" className="btn-primary inline-flex items-center gap-3">
-            Get in Touch
-            <ArrowRight className="w-5 h-5" />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/rv-booking" className="btn-primary inline-flex items-center gap-3">
+              Book Your Stay
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link to="/contact" className="btn-outline inline-flex items-center gap-3">
+              Get in Touch
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
         </motion.div>
       </section>
     </>
