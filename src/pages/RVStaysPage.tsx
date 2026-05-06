@@ -40,7 +40,7 @@ export default function RVStaysPage() {
         </motion.div>
       </section>
 
-      {/* Placeholder Section */}
+      {/* Content Section */}
       <section className="section-padding bg-background min-h-[400px] flex items-center justify-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -49,15 +49,21 @@ export default function RVStaysPage() {
           className="text-center max-w-2xl mx-auto"
         >
           <h2 className="font-display text-4xl md:text-5xl text-cream mb-6">
-            RV Stays
+            Experience Modern RV Living
           </h2>
           <p className="text-muted-foreground text-lg mb-8">
-            RV site information coming in Phase 2. For inquiries, please contact us.
+            Discover our fully-equipped RV accommodations perfect for your Ozark Mountain getaway. Explore our gallery to see all the amenities included in your stay.
           </p>
-          <Link to="/contact" className="btn-outline inline-flex items-center gap-3">
-            Contact Us for More Information
-            <ArrowRight className="w-5 h-5" />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/gallery" className="btn-primary inline-flex items-center gap-3">
+              View Gallery
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link to="/booking" className="btn-outline inline-flex items-center gap-3">
+              Book Now
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
         </motion.div>
       </section>
 
