@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Users, Wifi, Flame, Coffee } from 'lucide-react';
+import { ArrowRight, Users, Wifi, Coffee, UtensilsCrossed, Flame, Utensils } from 'lucide-react';
 import LocationMap from '@/components/LocationMap';
 
 const fadeUpVariants = {
@@ -25,9 +25,15 @@ const staggerContainer = {
 
 const features = [
   { icon: Users, title: 'Accommodates 6 People', description: '392 sq ft - Queen Bed, Bunk Bed, and Sleeper Sofa' },
-  { icon: Flame, title: 'Fireplaces', description: 'Cozy Electric Fireplace for Ambience' },
+  { icon: Wifi, title: 'Wi-Fi (Fiber Optic)', description: 'High-Speed Internet Connectivity' },
   { icon: Coffee, title: 'Fully Equipped Kitchen', description: 'Microwave, Refrigerator, Keurig, Electric Skillet, Crockpot, Hot Plate (no Stove)' },
   { icon: Wifi, title: 'Modern Comfort', description: 'Walk-in Shower and Essential Amenities' },
+];
+
+const outsideAmenities = [
+  { icon: UtensilsCrossed, title: 'Picnic Table', description: 'Perfect for outdoor dining and gatherings' },
+  { icon: Utensils, title: 'Charcoal Grill', description: 'BBQ facilities for delicious outdoor cooking' },
+  { icon: Flame, title: 'Fire Pit', description: 'Cozy gathering space for evening campfires' },
 ];
 
 export default function CabinsPage() {
@@ -142,7 +148,7 @@ export default function CabinsPage() {
             </motion.h2>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -160,6 +166,54 @@ export default function CabinsPage() {
                 </div>
                 <h3 className="font-display text-xl text-cream mb-2">{feature.title}</h3>
                 <p className="text-muted-foreground text-sm">{feature.description}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Outside Amenities Section */}
+      <section className="section-padding bg-card overflow-hidden">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="text-center mb-16"
+          >
+            <motion.span
+              variants={fadeUpVariants}
+              className="text-accent uppercase tracking-widest text-sm font-medium"
+            >
+              Outdoor Experience
+            </motion.span>
+            <motion.h2
+              variants={fadeUpVariants}
+              className="font-display text-3xl md:text-4xl text-cream mt-4"
+            >
+              Outside Amenities
+            </motion.h2>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {outsideAmenities.map((amenity) => (
+              <motion.div
+                key={amenity.title}
+                variants={fadeUpVariants}
+                className="text-center p-6"
+              >
+                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-primary/20 flex items-center justify-center">
+                  <amenity.icon className="w-7 h-7 text-accent" />
+                </div>
+                <h3 className="font-display text-xl text-cream mb-2">{amenity.title}</h3>
+                <p className="text-muted-foreground text-sm">{amenity.description}</p>
               </motion.div>
             ))}
           </motion.div>
