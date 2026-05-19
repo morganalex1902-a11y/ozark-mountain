@@ -12,6 +12,42 @@ const allImages = [
     title: 'Cabin Living',
     category: 'cabins'
   },
+  {
+    src: 'https://cdn.builder.io/api/v1/image/assets%2Fac5252b1c42047769d1ddf86d1c46ede%2Fa2fdee234e234bba9006927fb2b09470?format=webp&width=800&height=1200',
+    alt: 'Cozy Cabin Exterior',
+    title: 'Cabin Exterior at Night',
+    category: 'cabins'
+  },
+  {
+    src: 'https://cdn.builder.io/api/v1/image/assets%2Fac5252b1c42047769d1ddf86d1c46ede%2Fe768d719ca2741628d2de3c013f471e9?format=webp&width=800&height=1200',
+    alt: 'Cabin Forest Setting',
+    title: 'Woodland Setting',
+    category: 'cabins'
+  },
+  {
+    src: 'https://cdn.builder.io/api/v1/image/assets%2Fac5252b1c42047769d1ddf86d1c46ede%2F0f4adb417c804f79ad7a02814c2740d6?format=webp&width=800&height=1200',
+    alt: 'Cabin Master Bedroom',
+    title: 'Master Bedroom',
+    category: 'cabins'
+  },
+  {
+    src: 'https://cdn.builder.io/api/v1/image/assets%2Fac5252b1c42047769d1ddf86d1c46ede%2F4ce61d9928fe418a87b59658b8e63f24?format=webp&width=800&height=1200',
+    alt: 'Cabin Secondary Bedroom',
+    title: 'Guest Bedroom',
+    category: 'cabins'
+  },
+  {
+    src: 'https://cdn.builder.io/api/v1/image/assets%2Fac5252b1c42047769d1ddf86d1c46ede%2F9a7eefcc4d5b4ef0907117769fbc0918?format=webp&width=800&height=1200',
+    alt: 'Cabin Living Room',
+    title: 'Living Room Space',
+    category: 'cabins'
+  },
+  {
+    src: 'https://cdn.builder.io/api/v1/image/assets%2Fac5252b1c42047769d1ddf86d1c46ede%2F37b4b6b25f5b416bae4780e39cf69955?format=webp&width=800&height=1200',
+    alt: 'Cabin Kitchen and Dining',
+    title: 'Kitchen & Dining Area',
+    category: 'cabins'
+  },
   // RVs
   {
     src: 'https://cdn.builder.io/api/v1/image/assets%2Fdd39744a57194dc596387163b8ef2460%2F36a8f4d5e2cb4d65aedf4d20f087f8ed?format=webp&width=800&height=1200',
