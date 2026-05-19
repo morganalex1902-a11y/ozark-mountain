@@ -171,8 +171,10 @@ export default function GalleryPage() {
                     'Cozy & intimate atmosphere',
                     'Sleeps up to 6 people',
                     'Fully equipped kitchen',
-                    'Electric fireplace',
-                    'Modern amenities'
+                    'High-Speed Wi-Fi (Fiber Optic)',
+                    'Modern amenities',
+                    'Picnic table & charcoal grill',
+                    'Fire pit for gatherings'
                   ],
                   cta: '/cabins'
                 },
