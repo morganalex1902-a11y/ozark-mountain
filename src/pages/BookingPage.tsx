@@ -44,7 +44,7 @@ const initialBooking: BookingData = {
 };
 
 const cabinRooms = [
-  { id: 'standard', name: 'Our Cabin', price: 120, desc: 'Sleeps up to 6 people • Full amenities' }
+  { id: 'standard', name: 'Our Cabin', price: 150, desc: 'Sleeps up to 6 people • Full amenities' }
 ];
 
 const rvRooms = [
