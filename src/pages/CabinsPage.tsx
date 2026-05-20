@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Users, Wifi, Coffee, UtensilsCrossed, Flame, Utensils } from 'lucide-react';
+import { ArrowRight, Users, Wifi, Coffee, UtensilsCrossed, Flame, Utensils, Wind, Shirt } from 'lucide-react';
 import LocationMap from '@/components/LocationMap';
 
 const fadeUpVariants = {
@@ -28,6 +28,8 @@ const features = [
   { icon: Wifi, title: 'Wi-Fi (Fiber Optic)', description: 'High-Speed Internet Connectivity' },
   { icon: Coffee, title: 'Fully Equipped Kitchen', description: 'Microwave, Refrigerator, Keurig, Electric Skillet, Crockpot, Hot Plate (no Stove)' },
   { icon: Wifi, title: 'Modern Comfort', description: 'Walk-in Shower and Essential Amenities' },
+  { icon: Wind, title: 'Mini-Split', description: 'Modern climate control for year-round comfort' },
+  { icon: Shirt, title: 'All Linen Supplied', description: 'Fresh bedding and towels included' },
 ];
 
 const outsideAmenities = [
