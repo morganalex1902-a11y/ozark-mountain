@@ -261,6 +261,10 @@ export default function CabinsPage() {
               Book Now
               <ArrowRight className="w-5 h-5" />
             </Link>
+            <Link to="/gallery" className="btn-outline inline-flex items-center gap-3">
+              View Gallery
+              <ArrowRight className="w-5 h-5" />
+            </Link>
             <Link to="/contact" className="btn-outline inline-flex items-center gap-3">
               Contact Us
               <ArrowRight className="w-5 h-5" />
