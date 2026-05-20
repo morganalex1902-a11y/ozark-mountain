@@ -1,7 +1,6 @@
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
-import LocationMap from '@/components/LocationMap';
+import { ArrowRight, Truck } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -40,45 +39,89 @@ export default function RVStaysPage() {
         </motion.div>
       </section>
 
-      {/* Content Section */}
-      <section className="section-padding bg-background min-h-[400px] flex items-center justify-center">
+      {/* Coming Soon Section */}
+      <section className="section-padding bg-background min-h-[600px] flex items-center justify-center overflow-hidden">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-center max-w-2xl mx-auto"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={staggerContainer}
+          className="max-w-3xl mx-auto"
         >
-          <h2 className="font-display text-4xl md:text-5xl text-cream mb-6">
-            Experience Modern RV Living
-          </h2>
-          <p className="text-muted-foreground text-lg mb-8">
-            Discover our fully-equipped RV accommodations perfect for your Ozark Mountain getaway. Explore our gallery to see all the amenities included in your stay.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/gallery" className="btn-primary inline-flex items-center gap-3">
+          <motion.div
+            variants={fadeUpVariants}
+            className="text-center mb-8"
+          >
+            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-accent/10 border-2 border-accent/30 mb-6">
+              <Truck className="w-10 h-10 text-accent" />
+            </div>
+          </motion.div>
+
+          <motion.h2
+            variants={fadeUpVariants}
+            className="font-display text-4xl md:text-5xl text-cream mb-6 text-center"
+          >
+            RV Sites Coming Soon
+          </motion.h2>
+
+          <motion.p
+            variants={fadeUpVariants}
+            className="text-muted-foreground text-lg mb-10 leading-relaxed text-center"
+          >
+            We're developing premium RV camping sites in the heart of the Ozark Mountains. Experience the perfect blend of nature and modern comfort with our upcoming RV accommodations.
+          </motion.p>
+
+          <motion.div
+            variants={fadeUpVariants}
+            className="bg-card border border-accent/20 rounded-xl p-8 mb-10"
+          >
+            <h3 className="font-display text-2xl text-cream mb-6 text-center">RV Site Options Coming Soon</h3>
+            <div className="space-y-4">
+              <div className="flex items-start gap-4 p-4 bg-background/50 rounded-lg">
+                <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                <div>
+                  <p className="text-cream font-semibold">Standard RV Sites</p>
+                  <p className="text-muted-foreground text-sm">Master bedroom + living area setup</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4 p-4 bg-background/50 rounded-lg">
+                <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                <div>
+                  <p className="text-cream font-semibold">Deluxe RV Sites</p>
+                  <p className="text-muted-foreground text-sm">Master bedroom + bunk room + living area</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4 p-4 bg-background/50 rounded-lg">
+                <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                <div>
+                  <p className="text-cream font-semibold">Premium RV Suites</p>
+                  <p className="text-muted-foreground text-sm">All amenities + premium furnishings</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            variants={fadeUpVariants}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-accent/10 border border-accent/30 mb-10 w-full justify-center"
+          >
+            <span className="text-accent font-medium">Launching Late Spring 2026</span>
+          </motion.div>
+
+          <motion.div
+            variants={fadeUpVariants}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+          >
+            <Link to="/" className="btn-primary inline-flex items-center gap-3">
+              Back to Home
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link to="/gallery" className="btn-outline inline-flex items-center gap-3">
               View Gallery
               <ArrowRight className="w-5 h-5" />
             </Link>
-            <Link to="/booking" className="btn-outline inline-flex items-center gap-3">
-              Book Now
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
-        </motion.div>
-      </section>
-
-      {/* Location Section */}
-      <section className="section-padding bg-card overflow-hidden">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-          >
-            <LocationMap />
           </motion.div>
-        </div>
+        </motion.div>
       </section>
     </>
   );

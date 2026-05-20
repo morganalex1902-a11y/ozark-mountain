@@ -15,27 +15,29 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/cabins" element={<CabinsPage />} />
-            <Route path="/rv-stays" element={<RVStaysPage />} />
-            <Route path="/gallery" element={<GalleryPage />} />
-            <Route path="/booking" element={<BookingPage />} />
-            <Route path="/activities" element={<ActivitiesPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Layout>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Layout>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/cabins" element={<CabinsPage />} />
+              <Route path="/rv-stays" element={<RVStaysPage />} />
+              <Route path="/gallery" element={<GalleryPage />} />
+              <Route path="/booking" element={<BookingPage />} />
+              <Route path="/activities" element={<ActivitiesPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Layout>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+}
 
 export default App;

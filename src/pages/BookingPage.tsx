@@ -27,6 +27,14 @@ interface BookingData {
   cardName: string;
 }
 
+interface RoomType {
+  id: string;
+  name: string;
+  price: number;
+  desc: string;
+  comingSoon?: boolean;
+}
+
 const initialBooking: BookingData = {
   propertyType: 'cabin',
   checkIn: '',
@@ -44,13 +52,13 @@ const initialBooking: BookingData = {
 };
 
 const cabinRooms = [
-  { id: 'standard', name: 'Our Cabin', price: 120, desc: 'Sleeps up to 6 people • Full amenities' }
+  { id: 'standard', name: 'Our Cabin', price: 150, desc: 'Sleeps up to 6 people • Full amenities' }
 ];
 
 const rvRooms = [
-  { id: 'standard', name: 'Standard RV', price: 150, desc: 'Master bedroom + living area' },
-  { id: 'deluxe', name: 'Deluxe RV', price: 200, desc: 'Master bedroom + bunk room + living area' },
-  { id: 'suite', name: 'Premium Suite', price: 250, desc: 'All amenities + premium furnishings' }
+  { id: 'standard', name: 'Standard RV', price: 150, desc: 'Master bedroom + living area', comingSoon: true },
+  { id: 'deluxe', name: 'Deluxe RV', price: 200, desc: 'Master bedroom + bunk room + living area', comingSoon: true },
+  { id: 'suite', name: 'Premium Suite', price: 250, desc: 'All amenities + premium furnishings', comingSoon: true }
 ];
 
 const stepTitles: Record<Step, string> = {
@@ -357,13 +365,14 @@ export default function BookingPage() {
                     <Label className="text-cream mb-4 block">Room Type</Label>
                     <RadioGroup value={booking.roomType} onValueChange={(value) => setBooking(prev => ({ ...prev, roomType: value }))}>
                       <div className="space-y-3">
-                        {roomTypes.map(room => (
-                          <div key={room.id} className="flex items-center space-x-3 p-3 rounded-lg border border-accent/20 bg-background/50 hover:border-accent/50 cursor-pointer">
-                            <RadioGroupItem value={room.id} id={room.id} />
-                            <Label htmlFor={room.id} className="flex-1 cursor-pointer">
+                        {roomTypes.map((room: RoomType) => (
+                          <div key={room.id} className={`flex items-center space-x-3 p-3 rounded-lg border border-accent/20 bg-background/50 hover:border-accent/50 cursor-pointer ${room.comingSoon ? 'opacity-60' : ''}`}>
+                            <RadioGroupItem value={room.id} id={room.id} disabled={room.comingSoon} />
+                            <Label htmlFor={room.id} className={`flex-1 ${room.comingSoon ? 'cursor-not-allowed' : 'cursor-pointer'}`}>
                               <div className="font-semibold text-cream">{room.name}</div>
                               <div className="text-sm text-muted-foreground">{room.desc}</div>
                               <div className="text-sm text-accent font-semibold mt-1">${room.price}/night</div>
+                              {room.comingSoon && <div className="text-xs text-amber-400 mt-1 font-semibold">Coming Soon</div>}
                             </Label>
                           </div>
                         ))}
